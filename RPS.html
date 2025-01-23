@@ -11,17 +11,30 @@
     <button onclick="
         const RandomNum = Math.random();
 
-        const CPU_move = '';
+        let CPU_move = '';
+
         if (RandomNum >= 0 && RandomNum < 1/3){
             CPU_move = 'Rock';
         } else if (RandomNum >=1/3 && RandomNum <2/3){
             CPU_move = 'Paper';
+        } else {
+            CPU_move = 'Scissors';
         }
+
+        let Result = '';
+        if (CPU_move === 'Rock') {
+            Result = 'Tie. ;<;';
+        } else if (CPU_move === 'Paper') {
+            Result = 'Lose!! Oh No!!!';
+        } else if (CPU_move === 'Scissors') {
+            Result = 'You Win!';
+        }
+        
+        alert('You picked Rock, CPU Picked ' + CPU_move + '. ' + Result);
 
     ">Rock</button>
 
     <button onclick="
-        const RandomNum = Math.random();
     ">Paper</button>
     <button>Scissors</button>
     <script>
